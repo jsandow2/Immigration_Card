@@ -1,6 +1,6 @@
 # Immigration_Card
 
-## Does Immigrant Exposure During Formative Years Shape Native Educational Attainment?
+## Mother of Exiles, Maker of Scholars: Immigrant Exposure and U.S.-born Educational Attainment
 
 **Author:** Joe Sandow  
 **Institution:** University of Nebraska-Lincoln  
