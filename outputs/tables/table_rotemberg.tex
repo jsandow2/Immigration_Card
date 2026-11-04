@@ -1,0 +1,35 @@
+\begin{table}[!htbp]
+\centering
+\caption{Rotemberg Weights and Origin-Specific Estimates, Ten Largest Origins}
+\label{tab:rotemberg}
+\resizebox{\ifdim\width>\textwidth \textwidth\else \width\fi}{!}{
+
+\begin{tabular}{lccc}
+\toprule
+Origin & Weight (per cent) & Cumulative (per cent) & $\beta_k$\\
+\midrule
+Mexico & 18.9 & 18.9 & 1.26e-05\\
+India & 7.1 & 26.0 & 1.11e-05\\
+China & 6.9 & 32.9 & 1.18e-05\\
+Dominican Republic & 5.7 & 38.6 & 8.71e-06\\
+El Salvador & 3.7 & 42.2 & 1.19e-05\\
+Philippines & 3.5 & 45.7 & 1.46e-05\\
+Colombia & 3.1 & 48.8 & 6.86e-06\\
+Guatemala & 2.8 & 51.7 & 1.25e-05\\
+Ecuador & 2.5 & 54.1 & 7.23e-06\\
+Korea & 2.4 & 56.6 & 1.23e-05\\
+\midrule
+Origins in the decomposition & 230 &  & \\
+\quad with non-zero weight & 148 &  & \\
+\quad positive & 146 &  & \\
+\quad negative & 2 &  & \\
+\bottomrule
+\end{tabular}
+}
+\begin{minipage}{\textwidth}
+\footnotesize
+\vspace{4pt}
+\textit{Notes:} \citet{goldsmith2020bartik} show that a shift-share estimator is a weighted average of just-identified estimators, one per exposure share, with weights $\alpha_k$ summing to one. The design is only as credible as the exogeneity of the shares carrying substantial weight, so the distribution of those weights is reported directly. $\beta_k$ is the just-identified estimate using origin $k$'s share alone. Weights are computed on a 500{,}000-observation random draw from the estimation sample. Most origins contribute nothing: those with no 1990 settlement in any sample metropolitan area have a share of zero and therefore a weight of zero, which is why the count with non-zero weight is far below the total. Of those that do contribute, the two with negative weight carry $-3.0 \times 10^{-6}$ and $-3.3 \times 10^{-7}$ between them, which is negligible against a total of one. Table~\ref{tab:rotemberg_sensitivity} reports what happens when the highest-weighted origins are removed.
+\end{minipage}
+\end{table}
+

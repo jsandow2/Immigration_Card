@@ -1,0 +1,27 @@
+\begin{table}[!htbp]
+\centering
+\caption{Shock-Randomization Placebo: Outcomes Determined at Birth}
+\label{tab:adao_placebo}
+\resizebox{\ifdim\width>\textwidth \textwidth\else \width\fi}{!}{
+
+\begin{tabular}{lccc}
+\toprule
+  & Black & Asian & Aboriginal\\
+\midrule
+Estimate & 4.80e-07 & 1.58e-06$^{***}$ & -2.03e-09\\
+\quad MSA-clustered SE & (9.11e-07) & (5.63e-07) & (3.79e-08)\\
+\quad State-clustered SE & (7.57e-07) & (4.40e-07) & (4.05e-08)\\
+\midrule
+$p$-value, MSA clustering & 0.5993 & 0.0055 & 0.9573\\
+$p$-value, state clustering & 0.5296 & 0.0008 & 0.9602\\
+Magnitude, per cent of main estimate & 4.3 & 14.3 & 0.0\\
+\bottomrule
+\end{tabular}
+}
+\begin{minipage}{\textwidth}
+\footnotesize
+\vspace{4pt}
+\textit{Notes:} Each column regresses an indicator determined at birth on the instrument, with the full control set and fixed effects of the main specification. Because these outcomes cannot be caused by immigrant exposure, a significant coefficient indicates the instrument is correlated with something other than the channel of interest. The final row expresses each placebo estimate as a percentage of the main educational-attainment estimate, which is the relevant scale, since statistical significance on a sample this size is not itself informative about magnitude. Both clustering schemes are reported so that their ratio can be formed directly. $^{***}$ $p<0.01$, $^{**}$ $p<0.05$, $^{*}$ $p<0.10$.
+\end{minipage}
+\end{table}
+

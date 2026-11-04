@@ -1,0 +1,37 @@
+\begin{table}[!htbp]
+\centering
+\caption{Immigrant Exposure During Formative Years and U.S.-Born Educational Attainment}
+\label{tab:education_main}
+\resizebox{\ifdim\width>\textwidth \textwidth\else \width\fi}{!}{
+
+\begin{tabular}{lccc}
+\toprule
+  & (1) & (2) & (3)\\
+\midrule
+Reduced form & 7.25e-06$^{***}$ & 5.31e-06$^{***}$ & 7.24e-06$^{***}$\\
+\quad MSA-clustered SE & (7.34e-07) & (1.37e-06) & (7.37e-07)\\
+\quad State-clustered SE & (5.48e-07) & (1.01e-06) & (5.53e-07)\\
+2SLS & 1.12e-05$^{***}$ & 8.20e-06$^{***}$ & 1.12e-05$^{***}$\\
+\quad MSA-clustered SE & (1.50e-06) & (8.91e-07) & (1.49e-06)\\
+\quad State-clustered SE & (1.32e-06) & (6.05e-07) & (1.31e-06)\\
+Effect per SD (pp) & 4.74 & 3.47 & 4.74\\
+\midrule
+First-stage coefficient & 0.647 & 0.647 & 0.648\\
+\quad MSA-clustered SE & (0.105) & (0.105) & (0.105)\\
+Year FE & Yes & Yes & Yes\\
+MSA FE & Yes & Yes & Yes\\
+Race controls & Base & Base & Extended\\
+Observations & 8,537,597 & 8,537,597 & 8,537,597\\
+Identifying observations & 3,484,287 & 3,484,287 & 3,484,287\\
+MSA clusters & 175 & 175 & 175\\
+State clusters & 45 & 45 & 45\\
+\bottomrule
+\end{tabular}
+}
+\begin{minipage}{\textwidth}
+\footnotesize
+\vspace{4pt}
+\textit{Notes:} Column (1) reports the high-school margin: completing high school or more against failing to complete high school. Column (2) reports the college margin: completing some college or above against all lower attainment. Column (3) repeats column (1) with indicators for Asian and Aboriginal identity added to the control set. The instrument is the 1990 origin-group settlement share interacted with national arrival counts, averaged over each individual's ages 15--25 window; the endogenous variable is the realized inflow averaged over the \emph{same} window. Controls are race, sex, marital status, child age group, poverty status and parental education. Standard errors in parentheses are clustered on metropolitan area; state-clustered standard errors are reported alongside for every coefficient so that their ratio can be formed where it is wanted. ``Effect per SD'' rescales the reduced form to a one-standard-deviation increase in exposure among identifying observations and is the interpretable magnitude; the raw coefficients are per unit of inflow. Identifying observations are those with non-zero exposure; the remainder are retained and contribute to the controls and fixed effects but not to the instrument's variation. $^{***}$ $p<0.01$, $^{**}$ $p<0.05$, $^{*}$ $p<0.10$.
+\end{minipage}
+\end{table}
+

@@ -1,0 +1,38 @@
+\begin{table}[!htbp]
+\centering
+\caption{Distribution of Immigrant Exposure and of the Realized Inflow}
+\label{tab:exposure_distribution}
+\resizebox{\ifdim\width>\textwidth \textwidth\else \width\fi}{!}{
+
+\begin{tabular}{lcc}
+\toprule
+Statistic & Instrument & Realized inflow\\
+\midrule
+Mean & 3,084 & 2,464\\
+Standard deviation & 6,545 & 4,354\\
+10th percentile & 43 & 68\\
+25th percentile & 111 & 180\\
+Median & 451 & 666\\
+75th percentile & 2,267 & 2,694\\
+90th percentile & 8,696 & 6,295\\
+\midrule
+SD within metropolitan area (across cohorts) & 3,442 & 2,532\\
+SD within birth cohort (across metropolitan areas) & 6,378 & 4,156\\
+Variance share, metropolitan-area means (per cent) & 72.3 & 66.2\\
+Variance share, birth-cohort means (per cent) & 5.1 & 8.9\\
+SD net of metropolitan-area and survey-year effects & 3,427 & 2,518\\
+\midrule
+Identifying observations & 3,484,287 & 3,484,287\\
+MSA $\times$ birth-cohort cells & 5,775 & 5,775\\
+Metropolitan areas & 175 & 175\\
+Birth cohorts & 33 & 33\\
+\bottomrule
+\end{tabular}
+}
+\begin{minipage}{\textwidth}
+\footnotesize
+\vspace{4pt}
+\textit{Notes:} The instrument is the 1990 origin-group settlement share interacted with national arrival counts by origin, summed across origins and averaged over each individual's ages 15--25 window. The endogenous variable is the realized inflow into the metropolitan area itself, carrying no settlement share, averaged over the same window. Both are counts of arrivals, which is why effects are reported per standard deviation rather than per unit. Statistics are over the identifying observations, those whose window opens in or after the 1990 base year and so can carry non-zero exposure. The middle block reports how much spread survives removing each margin's means; the variance shares do not sum to 100 because the two margins are not orthogonal in an unbalanced panel. Its final row sweeps metropolitan-area and survey-year effects jointly, giving the variation available to identify the coefficients.
+\end{minipage}
+\end{table}
+

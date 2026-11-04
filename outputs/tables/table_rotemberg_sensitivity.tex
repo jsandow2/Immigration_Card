@@ -1,0 +1,25 @@
+\begin{table}[!htbp]
+\centering
+\caption{Sensitivity of the Estimate to Removing the Highest-Weighted Origins}
+\label{tab:rotemberg_sensitivity}
+\resizebox{\ifdim\width>\textwidth \textwidth\else \width\fi}{!}{
+
+\begin{tabular}{lccccc}
+\toprule
+Origins dropped & None (full instrument) & Largest origin & Three largest & Five largest & Ten largest\\
+\midrule
+Estimate & 1.11e-05 & 1.07e-05 & 1.05e-05 & 1.06e-05 & 1.06e-05\\
+\quad MSA-clustered SE & --- & (2.03e-07) & (2.02e-07) & (2.02e-07) & (2.04e-07)\\
+Change from full instrument (per cent) & --- & -3.30 & -4.69 & -3.84 & -4.46\\
+\midrule
+Rotemberg weight removed (per cent) & 0.0 & 18.9 & 32.9 & 42.2 & 56.6\\
+\bottomrule
+\end{tabular}
+}
+\begin{minipage}{\textwidth}
+\footnotesize
+\vspace{4pt}
+\textit{Notes:} Each column re-estimates the specification with the stated origins excluded from the construction of the instrument, on the same 500{,}000-observation draw used for Table~\ref{tab:rotemberg}. The reference column repeats the estimate on the full instrument, so the percentage changes are measured against a like-for-like baseline rather than against the full-sample headline. Removing the largest origin alone moves the estimate by 3.3 per cent, and removing the ten largest -- which together carry 56.6 per cent of the identifying weight -- moves it by 4.5 per cent. The estimate is therefore not an artefact of any one origin's exposure shares, which is the specific fragility the Rotemberg decomposition is designed to detect. The changes are not monotone in the number of origins removed. With roughly half the identifying weight gone the estimate is determined by a different and much smaller set of shares, and small non-monotonicities across those columns should not be read as structure.
+\end{minipage}
+\end{table}
+

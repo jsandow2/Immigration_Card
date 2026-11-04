@@ -1,0 +1,28 @@
+\begin{table}[!htbp]
+\centering
+\caption{Metropolitan-Area Attribution in the Actual-Inflow Series, Arrivals 2006-2019}
+\label{tab:attribution}
+\resizebox{\ifdim\width>\textwidth \textwidth\else \width\fi}{!}{
+
+\begin{tabular}{lc}
+\toprule
+  & Value\\
+\midrule
+Correlation of metro shares, near-arrival against all & 0.9974\\
+Mean absolute discrepancy per cell (pp) & 0.0567\\
+\midrule
+Gap against 1990 share index, across metros & 0.0770\\
+Gap against instrument, within metro & -0.0614\\
+\quad mean of per-metro correlations & -0.0641\\
+\quad metros beyond $+0.3$ (per cent) & 16.6\\
+\quad expected beyond $+0.3$ by chance (per cent) & 15.3\\
+\bottomrule
+\end{tabular}
+}
+\begin{minipage}{\textwidth}
+\footnotesize
+\vspace{4pt}
+\textit{Notes:} The rows are ordered by increasing relevance to the design. The first two establish magnitude, comparing the distribution of arrivals across metropolitan areas measured from all respondents against the same distribution measured only from respondents observed within two years of arrival. The third asks whether the discrepancy is larger in metropolitan areas with large 1990 co-national communities. The fourth is the one that binds, because metropolitan-area fixed effects absorb anything constant within a metropolitan area: it asks whether the discrepancy moves with the instrument across arrival years \emph{within} a metropolitan area. The per-metropolitan-area tail count is reported against the rate chance alone produces at this number of arrival years, since a correlation of $0.3$ on roughly a dozen observations sits well inside sampling noise. The comparison is restricted to arrivals in 2006--2019, the years for which the survey calendar supplies a wave within two years of every arrival year.
+\end{minipage}
+\end{table}
+

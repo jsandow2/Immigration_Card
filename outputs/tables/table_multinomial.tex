@@ -1,0 +1,28 @@
+\begin{table}[!htbp]
+\centering
+\caption{Multinomial Decomposition of the Binary Estimate, 100,000-Observation Draw}
+\label{tab:multinomial}
+\resizebox{\ifdim\width>\textwidth \textwidth\else \width\fi}{!}{
+
+\begin{tabular}{lccc}
+\toprule
+  & Effect (pp per SD) & Share of effect & Share of population\\
+\midrule
+No high school & -5.48 & --- & ---\\
+\midrule
+High school & 1.62 & 29.6 & 31.2\\
+Some college & 3.12 & 57.0 & 55.5\\
+Graduate degree & 0.73 & 13.4 & 13.3\\
+\midrule
+Implied high school or above & 5.48 & 100.0 & 100.0\\
+Binary high school or above & 5.43 & --- & ---\\
+\bottomrule
+\end{tabular}
+}
+\begin{minipage}{\textwidth}
+\footnotesize
+\vspace{4pt}
+\textit{Notes:} Two-stage residual inclusion with a four-category outcome. Multinomial coefficients across log-odds equations are not comparable to a binary model's, so both models are converted to average marginal effects on predicted probabilities and rescaled to a one-standard-deviation increase in exposure. The four marginal effects sum to zero by construction. ``Share of effect'' is each completing category's share of the total movement out of no-high-school; ``share of population'' is its share of the completing population in the same draw. Standard errors are not reported: the bootstrap behind the estimate uses 99 metropolitan-area resamples, which is too coarse to report.
+\end{minipage}
+\end{table}
+

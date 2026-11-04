@@ -1,0 +1,32 @@
+\begin{table}[!htbp]
+\centering
+\caption{Metropolitan Areas with the Largest Sum of Exposure Shares}
+\label{tab:sm_gateways}
+\resizebox{\ifdim\width>\textwidth \textwidth\else \width\fi}{!}{
+
+\begin{tabular}{lc}
+\toprule
+Metropolitan area & $S_m$\\
+\midrule
+New York-Newark-Jersey City, NY-NJ-PA & 48.162\\
+Los Angeles-Long Beach-Anaheim, CA & 24.636\\
+Washington-Arlington-Alexandria, DC-VA-MD-WV & 14.898\\
+Miami-Fort Lauderdale-West Palm Beach, FL & 10.455\\
+San Francisco-Oakland-Hayward, CA & 8.630\\
+Chicago-Naperville-Elgin, IL-IN-WI & 6.163\\
+Boston-Cambridge-Newton, MA-NH & 5.595\\
+Detroit-Warren-Dearborn, MI & 3.500\\
+Houston-The Woodlands-Sugar Land, TX & 3.150\\
+Urban Honolulu, HI & 3.125\\
+\midrule
+Median of the 175 estimation metropolitan areas & 0.238\\
+\bottomrule
+\end{tabular}
+}
+\begin{minipage}{\textwidth}
+\footnotesize
+\vspace{4pt}
+\textit{Notes:} $S_m = \sum_k s_{m,k}$ is the sum, across the 230 origins entering the inflow series, of metropolitan area $m$'s 1990 share of each origin's national population. Because the shares follow \citet{card2001immigrant} and are normalised by each origin's national total, they sum to one across metropolitan areas within an origin and need not sum to anything in particular across origins within a metropolitan area; $S_m$ therefore exceeds one for any metropolitan area holding a substantial fraction of many origins' national populations, and is best read as an index of how much of total U.S. immigration a metropolitan area absorbs. The ordering is the familiar ranking of immigrant gateways, which is the reason the largest value is far above the median rather than evidence of an error in the shares. Honolulu enters the ten largest despite its size because it holds a large share of several Pacific-origin populations. $S_m$ is the quantity controlled for in Table~\ref{tab:bhj_incomplete_shares}, following \citet{borusyak2022quasi}; the ten metropolitan areas listed here are those whose exposure that control most reduces.
+\end{minipage}
+\end{table}
+

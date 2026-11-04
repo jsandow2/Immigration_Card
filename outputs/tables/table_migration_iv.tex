@@ -1,0 +1,31 @@
+\begin{table}[!htbp]
+\centering
+\caption{IV Estimates of Immigrant Inflows on U.S.-Born Internal Migration}
+\label{tab:migration_iv}
+\resizebox{\ifdim\width>\textwidth \textwidth\else \width\fi}{!}{
+
+\begin{tabular}{lccc}
+\toprule
+  & All & Men & Women\\
+\midrule
+Levels (Card specification) & 6.96e-06 & 1.54e-06 & 3.03e-06\\
+ & (4.46e-06) & (4.74e-06) & (3.73e-06)\\
+Differences & 4.82e-05 & 8.61e-05 & 1.14e-05\\
+ & (4.60e-05) & (6.11e-05) & (3.33e-05)\\
+\midrule
+Mean P(moved) & 0.1645 & 0.1678 & 0.1612\\
+First-stage Wald, levels & 634.7 & 579.2 & 600.0\\
+First-stage Wald, differences & 23.7 & 24.1 & 23.4\\
+SE clustering & MSA & MSA & MSA\\
+Observations, levels & 1,000,000 & 500,000 & 500,000\\
+Observations, differences & 4,579,873 & 2,229,032 & 2,350,841\\
+\bottomrule
+\end{tabular}
+}
+\begin{minipage}{\textwidth}
+\footnotesize
+\vspace{4pt}
+\textit{Notes:} The two specifications use different samples, hence the separate observation counts. The levels specification follows \citet{card2001immigrant} on a seeded random draw from U.S.-born respondents aged 16--68. The differences specification uses the full sample of U.S.-born respondents aged 25--68; its instrument differences a baseline window at ages 14--19 against the preceding five years, and those windows overlap below age 24, which would drive the instrument mechanically toward zero in a younger sample. Standard errors in parentheses are clustered on metropolitan area; state-clustered alternatives do not change any conclusion. The first-stage Wald statistic is computed against the same metropolitan-area-clustered covariance matrix as the standard errors rather than as a homoskedastic $F$: the instrument varies at the metropolitan-area-by-year level, so a statistic assuming independence across individual records would largely restate the number of records rather than measure instrument strength. $^{***}$ $p<0.01$, $^{**}$ $p<0.05$, $^{*}$ $p<0.10$.
+\end{minipage}
+\end{table}
+

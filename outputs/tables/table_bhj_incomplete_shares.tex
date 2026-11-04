@@ -1,0 +1,32 @@
+\begin{table}[!htbp]
+\centering
+\caption{Sensitivity to the \citet{borusyak2022quasi} Sum-of-Shares Control}
+\label{tab:bhj_incomplete_shares}
+\resizebox{\ifdim\width>\textwidth \textwidth\else \width\fi}{!}{
+
+\begin{tabular}{lccc}
+\toprule
+  & Baseline & $S_m \times$ survey year & $S_m \times$ birth cohort\\
+\midrule
+Reduced form & 7.25e-06$^{***}$ & 7.27e-06$^{***}$ & 4.65e-06$^{**}$\\
+\quad MSA-clustered SE & (7.34e-07) & (7.37e-07) & (2.18e-06)\\
+2SLS & 1.12e-05$^{***}$ & 1.12e-05$^{***}$ & 1.52e-05$^{***}$\\
+\quad MSA-clustered SE & (1.50e-06) & (1.50e-06) & (5.51e-06)\\
+First-stage coefficient & 0.647 & 0.648 & 0.306\\
+\midrule
+Effect per SD (pp) & 4.74 & 4.76 & 3.04\\
+Instrument SD retained & 3427.1 & 3390.5 & 1618.0\\
+\quad per cent of raw SD & 52.4 & 51.8 & 24.7\\
+\midrule
+Movement in reduced form (SE) & --- & 0.02 & -1.19\\
+Movement in 2SLS (SE) & --- & 0.02 & 0.72\\
+\bottomrule
+\end{tabular}
+}
+\begin{minipage}{\textwidth}
+\footnotesize
+\vspace{4pt}
+\textit{Notes:} $S_m = \sum_k s_{m,k}$ is metropolitan area $m$'s 1990 exposure shares summed across origins; its distribution across the panel is reported in Table~\ref{tab:sm_gateways}. Column (1) is the headline specification of Table~\ref{tab:education_main}. Columns (2) and (3) add $S_m$ interacted with survey-year and with birth-cohort effects respectively, the latter as cohort-specific slopes without cohort fixed effects. ``Instrument SD retained'' is the standard deviation of the instrument surviving each column's own absorption, over the identifying observations. Movement is reported in standard errors of the column's own specification: the controls absorb identifying variation, so the controlled estimates are less precise, and because the estimator is just-identified a change in the first stage moves the reduced form and the 2SLS in opposite directions. Standard errors are clustered on metropolitan area. $^{***}$ $p<0.01$, $^{**}$ $p<0.05$, $^{*}$ $p<0.10$.
+\end{minipage}
+\end{table}
+

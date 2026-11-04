@@ -1,0 +1,29 @@
+\begin{table}[!htbp]
+\centering
+\caption{Pooled Sample versus Identifying Subsample, Both Education Margins}
+\label{tab:exposure_missing}
+\resizebox{\ifdim\width>\textwidth \textwidth\else \width\fi}{!}{
+
+\begin{tabular}{lcccc}
+\toprule
+  & Pooled & Identifying & Pooled & Identifying\\
+\midrule
+Reduced form & 7.25e-06$^{***}$ & 2.19e-05$^{***}$ & 5.31e-06$^{***}$ & 1.58e-05$^{***}$\\
+ & (7.34e-07) & (4.53e-06) & (1.37e-06) & (3.44e-06)\\
+2SLS & 1.12e-05$^{***}$ & 3.24e-05$^{***}$ & 8.20e-06$^{***}$ & 2.34e-05$^{***}$\\
+ & (1.50e-06) & (3.44e-06) & (8.91e-07) & (2.42e-06)\\
+Effect per SD (pp) & 4.74 & 14.33 & 3.47 & 10.33\\
+\midrule
+First-stage coefficient & 0.647 & 0.675 & 0.647 & 0.675\\
+Outcome mean (per cent) & 69.7 & 56.8 & 48.0 & 40.8\\
+Observations & 8,537,597 & 3,484,287 & 8,537,597 & 3,484,287\\
+\bottomrule
+\end{tabular}
+}
+\begin{minipage}{\textwidth}
+\footnotesize
+\vspace{4pt}
+\textit{Notes:} Columns (1) and (2) report the high-school margin; columns (3) and (4) the college margin. ``Pooled'' is the full estimation sample. ``Identifying'' restricts to observations with non-zero exposure -- those whose ages 15--25 window opens in 1990 or later, the base year of the settlement shares. Standard errors in parentheses are clustered on metropolitan area. The outcome mean is the share of each sample with the outcome, which is what makes a percentage-point effect interpretable. The restricted estimate is roughly three times the pooled estimate on both margins. This is not a validation of the pooled specification but a statement about who identifies it: the condition that creates non-zero exposure also makes the identifying sample young, and younger respondents are more likely to be recorded as not having completed a given level of schooling because they have not yet finished it. The restricted magnitude is correspondingly less plausible as a causal effect, not more. The cohort structure behind this is reported in Table~\ref{tab:birth_cohort}. $^{***}$ $p<0.01$, $^{**}$ $p<0.05$, $^{*}$ $p<0.10$.
+\end{minipage}
+\end{table}
+

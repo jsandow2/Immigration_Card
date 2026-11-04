@@ -1,0 +1,47 @@
+\begin{table}[!htbp]
+\centering
+\caption{IV Estimates of Immigrant Inflows on Mean Hourly Wages by Occupation Group}
+\label{tab:wage_iv}
+\resizebox{\ifdim\width>\textwidth \textwidth\else \width\fi}{!}{
+
+\begin{tabular}{lccc}
+\toprule
+Occupation Group & All & Men & Women\\
+\midrule
+Clerical Workers & -6.55e-05 & -1.31e-04 & -6.57e-05\\
+ & (7.54e-05) & (9.80e-05) & (1.13e-04)\\
+\quad Effect per SD (\$/hour) & -0.060 & -0.121 & -0.060\\
+ &  &  & \\
+Low-Skill Labor \& Service & -9.51e-06 & -2.40e-06 & -3.96e-05$^{**}$\\
+ & (1.17e-05) & (1.54e-05) & (1.76e-05)\\
+\quad Effect per SD (\$/hour) & -0.034 & -0.009 & -0.143\\
+ &  &  & \\
+Managers & 1.21e-04 & 2.33e-04 & -2.63e-04\\
+ & (1.87e-04) & (2.57e-04) & (2.37e-04)\\
+\quad Effect per SD (\$/hour) & 0.166 & 0.323 & -0.368\\
+ &  &  & \\
+Military Occupations$^{\dagger}$ & 2.27e-02 & -1.30e-02 & 3.15e-01$^{**}$\\
+ & (5.16e-02) & (5.10e-02) & (1.24e-01)\\
+\quad Effect per SD (\$/hour) & 0.572 & -0.331 & 10.230\\
+ &  &  & \\
+Operatives \& Craft Workers & -1.40e-06 & -3.81e-06 & 6.15e-06\\
+ & (3.01e-05) & (2.85e-05) & (6.55e-05)\\
+\quad Effect per SD (\$/hour) & -0.002 & -0.007 & 0.011\\
+ &  &  & \\
+Professional \& Technical Workers & 2.35e-04$^{**}$ & 3.41e-04$^{*}$ & 1.49e-04\\
+ & (1.08e-04) & (2.04e-04) & (1.55e-04)\\
+\quad Effect per SD (\$/hour) & 0.529 & 0.771 & 0.336\\
+ &  &  & \\
+Sales Workers & -2.19e-04$^{***}$ & -3.01e-04$^{***}$ & -1.04e-04\\
+ & (7.32e-05) & (1.04e-04) & (9.20e-05)\\
+\quad Effect per SD (\$/hour) & -0.212 & -0.293 & -0.101\\
+\bottomrule
+\end{tabular}
+}
+\begin{minipage}{\textwidth}
+\footnotesize
+\vspace{4pt}
+\textit{Notes:} Coefficients are IV estimates within metropolitan-area-by-occupation-by-year cells, with metropolitan-area and survey-year fixed effects; cell means are unweighted. Occupation-specific inflows are divided by the number of survey waves that could have observed each arrival year, as elsewhere in the chapter, and arrival years with fewer than two eligible waves are dropped. Standard errors in parentheses are clustered on metropolitan area. The per-standard-deviation column is the comparable one, since inflow volume differs by an order of magnitude across occupation groups and the raw coefficients are therefore measured against different-sized shocks. $^{\dagger}$~Military occupations are reported for completeness but are not interpretable; the reasons are given in the text. $^{***}$ $p<0.01$, $^{**}$ $p<0.05$, $^{*}$ $p<0.10$.
+\end{minipage}
+\end{table}
+

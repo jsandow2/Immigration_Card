@@ -1,0 +1,144 @@
+# Ignore RStudio junk
+.Rproj.user/
+.Rhistory
+*.Rhistory
+.RData
+.RDataTmp*
+
+# Ignore large binary files
+*.RData
+*.rds
+*.fst
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.sav
+*.dta
+*.zip
+*.txt
+*.xml
+*.pdf
+*.docx
+*.png
+*.jpg
+
+# Ignore project output folders
+chunk_outputs/
+meta_outputs_fst/
+PUMAFIles/
+PUMS to IPUMS/
+*.html
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.tif
+*.tiff
+
+
+# Keep only R scripts and project metadata
+!*.Rproj
+!README.md
+.positai
+
+# Modular pipeline (scripts/data_construction/, scripts/analysis/): the .R
+# files themselves are meant to be tracked. Their runtime checkpoint images
+# (checkpoints/after_secXX.RData in each half) are already caught by the
+# *.RData rule above -- this line is just documentation, not a new pattern.
+# scripts/*/checkpoints/
+
+# Dissertation deliverables.
+# The blanket *.pdf / *.png rules above exist to keep rendered drafts and data
+# dumps out of the repo, and they also caught every figure the chapters show.
+# The figures and tables the .tex files \includegraphics and \input are
+# deliverables rather than by-products, so they are re-included here. These
+# negations work because outputs/ is not itself an excluded directory -- git
+# cannot re-include a file beneath an excluded parent, so if outputs/ is ever
+# added to the folder list above, these lines stop having any effect.
+#
+# Only the two deliverable folders are re-included. Note that the map PDFs are binaries of
+# a few hundred KB each: every re-run of 28 or 29 rewrites them in full, so
+# each run adds that much to history rather than a diff.
+!outputs/figures/*.pdf
+!outputs/figures/*.png
+# .tex was never matched by a rule above; listed for intent, not effect.
+!outputs/tables/*.tex
+# The estimation results the rendering scripts read. 292 KB for all of them,
+# and committing them makes each rendered table auditable against its source
+# rather than only reproducible by re-running the estimation.
+!outputs/tables/*.csv
+
+
+# Inputs the pipeline cannot run without.
+# The blanket *.xml and *.csv rules above exist to keep data extracts out, but
+# they also caught two small files the code reads directly, so a fresh clone
+# could not run: 00_setup_analysis.R parses the DDI to build bpld_lookup, and
+# 29_map_destination_us.R reads the county crosswalk. Both are reference
+# files of under a megabyte, not data, and both are re-included here.
+!data/crosswalks/*
+# 02_msa_crosswalk.R reads six files from data/crosswalks/ and only one was
+# tracked, so the whole folder is re-included -- 5.2 MB of published PUMA,
+# CBSA and county reference tables, all Census Bureau products.
+# data/raw_pums_1990/ stays ignored: it is 1.2 GB and the only script that
+# ever read it is archived and unused.
+#
+# The IPUMS DDI codebook is NOT re-included. IPUMS bars redistribution of its
+# microdata, and whether that extends to the codebook documenting an extract
+# is not something we could establish. It is also unnecessary: anyone
+# reproducing this must build their own extract, which generates its own DDI.
+# The extract specification is in the README so an equivalent one can be
+# built. outputs/tables/bpld_codes.csv is excluded for the same reason -- it
+# is a cache of IPUMS value labels, rebuilt by 22_origin_composition.R.
+usa_00007.xml
+usa_00007.cbk
+Codebooks/
+outputs/tables/bpld_codes.csv
+
+# Superseded code and workflow plumbing. archive/ holds 67 files recording
+# every approach tried and abandoned, and tools/ holds the sync scripts for a
+# two-repo setup that no longer exists. Neither helps anyone reproduce the
+# analysis, both publish abandoned avenues as though they were closed, and
+# several files hardcode local OneDrive paths and usernames
+# (archive/scripts/Immigration_Card_Data_In.R, tools/archive/sync_chapters.R).
+archive/
+tools/
+
+# IPUMS microdata extracts. Large, and IPUMS requires each user to register
+# and generate their own, so they cannot be redistributed here anyway.
+*.gz
+*.dat
+
+# Private working notes. The repo is going public; the tracked scripts state
+# what the design is and why, and notes/methods_history.md keeps the record of
+# what was tried and set aside. That record stays out of the public artefact
+# because "we tried X and it broke" reads as a verdict on X when it is usually
+# a verdict on one implementation whose cause was never isolated, and would
+# discourage someone from an avenue that is not actually closed.
+notes/
+
+# The working paper and the script that builds it. The paper is a generated
+# repackaging of Immigration_Card.tex for circulation, not a research artefact:
+# tracking it would put a second copy of the chapter in the repo and invite the
+# two to drift, and the build script is LaTeX plumbing that asserts on the
+# chapter's exact comment text so it fails loudly when the chapter changes.
+# Neither is any use to someone reproducing the analysis, which is what this
+# repo is for. The committee receives the PDF. The build script lives in
+# notes/, already excluded above, so that scripts/ holds only the pipeline.
+chapter2_working_paper.tex
+chapter2_jmp.tex
+
+# Internal working documents and superseded drafts. The repo is going public as
+# a replication artefact: it carries the pipeline, the outputs it produces, and
+# the chapter those outputs appear in. Process notes, review passes, chapter
+# assignments and earlier drafts of the prose are working material, and
+# dissertation_2026-10-05.tex contains unpublished Chapter 1.
+CHAPTER_ASSIGNMENT.md
+Chapter3_Context_Document.md
+TEX_REVIEW_ch2_2026-10-04.md
+writeup_notes_2026-09-22.md
+ch2_conclusion_draft.tex
+ch2_results_excerpt.tex
+ch2_robustness_excerpt.tex
+chapter2_immigration.tex
+dissertation_2026-10-05.tex

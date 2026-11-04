@@ -1,0 +1,43 @@
+"Dimension","Origin","Category","n","share"
+"Education","Mexico","non_HS",741428,52.4060716368327
+"Education","Mexico","HighSch",392374,27.7340213108091
+"Education","Mexico","College",250794,17.726776342528
+"Education","Mexico","Grad",30179,2.13313070983018
+"Education","Other","College",2050008,43.9608719744316
+"Education","Other","HighSch",1094717,23.4753785766855
+"Education","Other","Grad",839682,18.0063457807163
+"Education","Other","non_HS",678849,14.5574036681666
+"Occupation (all)","Mexico","Low-Skill Labor & Service",468664,33.126398190525
+"Occupation (all)","Mexico","Not in Labor Force",349863,24.7292325634818
+"Occupation (all)","Mexico","Operatives & Craft Workers",322273,22.7790991500415
+"Occupation (all)","Mexico","Clerical Workers",75026,5.30303405135092
+"Occupation (all)","Mexico","Managers",70798,5.00418794507961
+"Occupation (all)","Mexico","Professional & Technical Workers",66860,4.72583979784771
+"Occupation (all)","Mexico","Sales Workers",60711,4.29121238359456
+"Occupation (all)","Mexico","Military Occupations",580,0.0409959180788465
+"Occupation (all)","Other","Not in Labor Force",1173005,25.1542055593774
+"Occupation (all)","Other","Professional & Technical Workers",949424,20.3596800175671
+"Occupation (all)","Other","Low-Skill Labor & Service",851600,18.2619182819901
+"Occupation (all)","Other","Managers",565555,12.1278994762458
+"Occupation (all)","Other","Operatives & Craft Workers",441610,9.46999264033542
+"Occupation (all)","Other","Clerical Workers",360690,7.73472440715243
+"Occupation (all)","Other","Sales Workers",315503,6.76572334866454
+"Occupation (all)","Other","Military Occupations",5869,0.125856268667214
+"Occupation (employed)","Mexico","Low-Skill Labor & Service",468664,44.009645867452
+"Occupation (employed)","Mexico","Operatives & Craft Workers",322273,30.2628761813183
+"Occupation (employed)","Mexico","Clerical Workers",75026,7.04527698063314
+"Occupation (employed)","Mexico","Managers",70798,6.64824886939015
+"Occupation (employed)","Mexico","Professional & Technical Workers",66860,6.27845305527593
+"Occupation (employed)","Mexico","Sales Workers",60711,5.701034451673
+"Occupation (employed)","Mexico","Military Occupations",580,0.0544645942575537
+"Occupation (employed)","Other","Professional & Technical Workers",949424,27.2021697006891
+"Occupation (employed)","Other","Low-Skill Labor & Service",851600,24.3993913331735
+"Occupation (employed)","Other","Managers",565555,16.2038489495455
+"Occupation (employed)","Other","Operatives & Craft Workers",441610,12.6526716846439
+"Occupation (employed)","Other","Clerical Workers",360690,10.3342137857707
+"Occupation (employed)","Other","Sales Workers",315503,9.03955045066959
+"Occupation (employed)","Other","Military Occupations",5869,0.168154095507744
+"Sex","Mexico","1",725332,51.2683642275273
+"Sex","Mexico","2",689443,48.7316357724727
+"Sex","Other","2",2522892,54.1015119049866
+"Sex","Other","1",2140364,45.8984880950134

@@ -1,0 +1,8 @@
+"quantity","value","arrival_years","recent_max"
+"Correlation of within-year metro shares, near vs all",0.99744955250886,"2006-2019",2
+"Mean absolute discrepancy per cell (percentage points)",0.0567448672019117,"2006-2019",2
+"Correlation of signed relative gap with 1990 share index",0.0770002319589654,"2006-2019",2
+"Correlation of gap with instrument, within metro (standardised)",-0.0613748726408304,"2006-2019",2
+"Mean of per-metro correlations",-0.0640974022146243,"2006-2019",2
+"Metros with correlation beyond +0.3 (per cent)",16.5714285714286,"2006-2019",2
+"Expected beyond +0.3 under a true zero (per cent)",15.3134497316906,"2006-2019",2
