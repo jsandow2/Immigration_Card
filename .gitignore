@@ -104,6 +104,11 @@ outputs/tables/bpld_codes.csv
 archive/
 tools/
 
+# A working-session document that sits inside the pipeline tree. Same category
+# as notes/: it records an approach that was abandoned, and says so in its own
+# opening lines.
+scripts/data_construction/Claude outputs/
+
 # IPUMS microdata extracts. Large, and IPUMS requires each user to register
 # and generate their own, so they cannot be redistributed here anyway.
 *.gz
