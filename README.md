@@ -164,9 +164,9 @@ used, so an extract built to it is equivalent. **Nineteen samples:**
 - 2000 Census 5 percent (`200001`)
 - ACS 1-year for every year 2006 through 2019, then 2021, 2022 and 2023
 
-There is no 2010 decennial sample. The 2010 Census was short-form only, so the
-2010 observations are the 2010 ACS, as are every year from 2006 onward. 2020 is
-absent: pandemic-year collection departed from standard sampling procedures.
+2010 is an ACS year, as is every year from 2006 onward; the 2010 decennial
+carried only short-form variables. 2020 is absent: pandemic-year collection
+departed from standard sampling procedures.
 
 **Eighty-three variables.** The pipeline reads more of these than the headline
 specification uses — `OCC2010` builds `Occup_Group` and `YNGCH` builds
