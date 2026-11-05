@@ -4,8 +4,8 @@
 
 **Author:** Joe Sandow  
 **Institution:** University of Nebraska-Lincoln  
-**Advisor:** Ed  
-**Status:** Dissertation Chapter 2 — job market paper (in progress)
+**Advisor:** Edward Balistreri  
+**Status:** Dissertation Chapter 2 — job market paper. Draft of November 2026.
 
 ---
 
@@ -19,7 +19,8 @@ educational attainment of U.S.-born adults.
 The data are individual-level records from IPUMS USA covering 1990--2023,
 restricted to the 175 metropolitan areas that appear most consistently among
 the largest 175 across the sample years. That yields an estimation sample of
-8,537,597 U.S.-born observations across 45 states, of which 3,484,287 have
+8,537,597 U.S.-born observations across 44 states and the District of
+Columbia, of which 3,484,287 have
 non-zero exposure and identify the coefficient.
 
 Identification follows Card (2001). The instrument is the 1990 distribution
@@ -66,11 +67,13 @@ detectable effect of immigrant inflows on U.S.-born internal migration (no
 estimate distinguishable from zero), and no negative wage effect at the
 low-skill end.
 
-Identification is checked four ways: a Rotemberg decomposition, where no single
-origin carries more than 11.2 percent of the weight; the Adão--Kolesár--Morales
-placebo; a leave-one-out specification; and a test of whether metropolitan
-attribution error in the endogenous variable correlates with the instrument
-within metro, which it does not.
+Identification is checked five ways: a Rotemberg decomposition, where Mexico
+carries 18.9 percent of the weight and removing it moves the estimate by 3.3
+percent; the Adão--Kolesár--Morales placebo; the sum-of-shares control that an
+instrument built from incomplete shares requires; a leave-one-out
+specification; and a test of whether metropolitan attribution error in the
+endogenous variable correlates with the instrument within metro, which it does
+not.
 
 ---
 
@@ -326,8 +329,9 @@ predicted_inflow_{m,t} = sum_k s_{m,k,1990} * Delta_M_{k,t}
 `s_{m,k,1990}` is the share of all U.S. immigrants from origin `k` in 1990
 located in MSA `m` (national share definition, group_by BPLD not MSA), and
 `Delta_M_{k,t}` is the national inflow of immigrants from origin `k` in year
-`t`. All inflow variables are rescaled to units of 100 persons before
-modeling.
+`t`. Inflow variables enter the models unnormalized, as pooled counts of
+respondents; an earlier convention that rescaled them to units of 100 persons
+was removed.
 
 ---
 
@@ -348,9 +352,9 @@ modeling.
 The analysis restricts to natives residing in the 175 MSAs that appear
 consistently across all survey years (1990--2023). MSA codes use the
 MET2013 definition from IPUMS, crosswalked to CBSA codes where necessary.
-The 175 stable MSAs span 45 states and the District of Columbia. Six states
-(Montana, North Dakota, South Dakota, Vermont, West Virginia, Wyoming) have
-no qualifying MSAs.
+The 175 stable MSAs span 44 states and the District of Columbia, or 45
+state-level jurisdictions. Six states (Montana, North Dakota, South Dakota,
+Vermont, West Virginia, Wyoming) have no qualifying MSAs.
 
 ---
 
