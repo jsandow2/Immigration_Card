@@ -656,11 +656,65 @@ if (!all(c("pop_share", "effect_share") %in% names(mm))) {
 }
 
 # =============================================================================
-cat("\nTen tables written in the Chapter 1 convention:\n")
+# TABLE 14 -- Exposure-robust standard errors
+# =============================================================================
+# The estimate is the headline one: 16b residualises on the controls and fixed
+# effects at the individual level and then collapses to MSA x cohort, which
+# reproduces the coefficient exactly. Only the variance differs across rows, so
+# the table reports one estimate and four ways of putting an interval round it.
+ak <- need("akm_se_results.csv")
+ak <- ak[match(c("y_HSplus", "y_CollPlus"), outcome)]
+
+ci <- function(l, r, d = 2)
+  paste0("[", sci(l, d), ", ", sci(r, d), "]")
+
+akx <- build(list(
+  rw("Estimate", vapply(ak$est_cell, est, character(1))),
+  MID(nrow(ak)),
+  rw("\\quad MSA-clustered SE", vapply(ak$se_cluster, se, character(1))),
+  rw("\\quad Exposure-robust SE, AKM",
+     vapply(ak$se_akm, se, character(1))),
+  rw("\\quad Exposure-robust SE, AKM0",
+     vapply(ak$se_akm0, se, character(1))),
+  MID(nrow(ak)),
+  rw("AKM $\\div$ MSA-clustered", vapply(ak$ratio_akm, fx, character(1), d = 3)),
+  rw("AKM0 $\\div$ MSA-clustered", vapply(ak$ratio_akm0, fx, character(1), d = 3)),
+  MID(nrow(ak)),
+  rw("MSA-clustered 95\\% interval",
+     mapply(ci, ak$cluster_ci_l, ak$cluster_ci_r)),
+  rw("AKM0 95\\% interval", mapply(ci, ak$akm0_ci_l, ak$akm0_ci_r)),
+  MID(nrow(ak)),
+  rw("Metropolitan area $\\times$ cohort cells",
+     rep(cm(ak$n_cells[1]), nrow(ak))),
+  rw("Origins", rep(cm(ak$n_origins_used[1]), nrow(ak))),
+  rw("Rank of the 1990 share matrix", rep(cm(ak$rank_shares[1]), nrow(ak)))
+), c(" ", "High school or above", "College or above"))
+
+write_dissertation_table(
+  akx,
+  caption = "Exposure-Robust Standard Errors",
+  label = "tab:akm_inference",
+  align = "lcc",
+  notes = paste(
+    "\\citet{adao2019shift} show that shift-share residuals are correlated",
+    "across areas with similar exposure shares, which clustering on geography",
+    "does not capture. AKM is their exposure-robust standard error and AKM0",
+    "the null-imposed version, whose interval is obtained by inverting a test",
+    "and is therefore not symmetric about the estimate. Shocks are clustered",
+    "on origin: the instrument averages national inflows over an eleven-year",
+    "window, so adjacent cohorts drawn from one origin share ten of those",
+    "years. The share matrix has 230 origins but only 175 metropolitan areas,",
+    "so its rank is bounded by the latter; the redundant columns are retained",
+    "here and dropped inside the variance calculation."),
+  file = file.path(OUT, "table_akm_inference.tex")
+)
+
+# =============================================================================
+cat("\nEleven tables written in the Chapter 1 convention:\n")
 for (f in c("table_education_main", "table_migration_iv", "table_wage_iv",
             "table_exposure_missing", "table_birth_cohort", "table_rotemberg",
             "table_rotemberg_sensitivity", "table_attribution",
-            "table_adao_placebo", "table_multinomial"))
+            "table_adao_placebo", "table_multinomial", "table_akm_inference"))
   cat("  ", file.path(OUT, paste0(f, ".tex")), "\n", sep = "")
 cat("\nPreamble: booktabs, graphicx. No xcolor, no makecell.\n")
 cat("Descriptive tables (Table 1 from 23, origin composition from 21) are not\n")

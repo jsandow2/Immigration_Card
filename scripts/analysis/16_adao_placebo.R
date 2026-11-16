@@ -5,14 +5,24 @@
 # Renumbered 2026-10-21 from 20_adao_placebo.R (archive-and-renumber pass).
 # REBUILT 2026-09-29 on the final specification.
 #
-# WHAT THIS TESTS, AND WHY IT IS CHAPTER 2's INFERENCE
+# WHAT THIS TESTS, AND WHAT IT DOES NOT
 # Adao, Kolesar & Morales show that shift-share designs induce correlation in
 # residuals ACROSS regions with similar share vectors -- regions exposed to the
 # same national shocks move together even when they are far apart. Conventional
 # region-clustered standard errors do not capture that, so they can be
-# understated. This is the canonical robustness check for the design and the
-# one a referee in this literature expects. Alternative inference procedures
-# are taken up in the later chapter.
+# understated.
+#
+# Neither quantity below is the correction for that. A placebo asks whether the
+# instrument predicts outcomes it cannot have caused, which is a question about
+# validity rather than about inference. The MSA-versus-state comparison
+# coarsens the GEOGRAPHIC cluster, and the dependence AKM describe runs across
+# units with similar share vectors whether or not they are geographic
+# neighbours, so a geographic cluster at any level can miss it.
+#
+# The exposure-robust variance estimator itself is in 16b_akm_standard_errors.R,
+# which runs the design at the metropolitan-area-by-cohort level where its
+# shift-share structure lives and uses the authors' own implementation. The two
+# scripts answer different questions and the chapter reports both.
 #
 # Two things are computed.
 #
@@ -29,11 +39,13 @@
 #      one is reassuring whatever its t-statistic; one that is half the size is
 #      damning whatever its t-statistic.
 #
-#   2. MSA-VERSUS-STATE CLUSTERING. If cross-regional correlation is inflating
-#      precision, clustering at a coarser level should widen the standard error.
-#      A state/MSA SE ratio near or below one means MSA clustering is not
-#      understating uncertainty on this dimension; a ratio well above one means
-#      it is.
+#   2. MSA-VERSUS-STATE CLUSTERING. Whether coarsening the geographic cluster
+#      widens the standard error. A ratio well above one would indicate
+#      correlation across neighbouring metropolitan areas that MSA clustering
+#      misses. A ratio near or below one rules that out and nothing more:
+#      coarsening also cuts the cluster count from 175 to 45, which biases
+#      cluster-robust variance downward on its own, and it leaves the
+#      share-vector dependence of item 1's preamble untouched either way.
 #
 # WHAT CHANGED IN THE REBUILD
 #   - Endogenous variable is avg_actual_exposure_nodiv and the instrument is

@@ -1,0 +1,35 @@
+\begin{table}[!htbp]
+\centering
+\caption{Exposure-Robust Standard Errors}
+\label{tab:akm_inference}
+\resizebox{\ifdim\width>\textwidth \textwidth\else \width\fi}{!}{
+
+\begin{tabular}{lcc}
+\toprule
+  & High school or above & College or above\\
+\midrule
+Estimate & 3.24e-05 & 2.34e-05\\
+\midrule
+\quad MSA-clustered SE & (5.29e-06) & (3.79e-06)\\
+\quad Exposure-robust SE, AKM & (2.82e-06) & (1.93e-06)\\
+\quad Exposure-robust SE, AKM0 & (5.44e-06) & (3.76e-06)\\
+\midrule
+AKM $\div$ MSA-clustered & 0.533 & 0.508\\
+AKM0 $\div$ MSA-clustered & 1.029 & 0.992\\
+\midrule
+MSA-clustered 95\% interval & {}[2.21e-05, 4.27e-05] & {}[1.60e-05, 3.08e-05]\\
+AKM0 95\% interval & {}[2.80e-05, 4.94e-05] & {}[2.04e-05, 3.52e-05]\\
+\midrule
+Metropolitan area $\times$ cohort cells & 5,775 & 5,775\\
+Origins & 230 & 230\\
+Rank of the 1990 share matrix & 175 & 175\\
+\bottomrule
+\end{tabular}
+}
+\begin{minipage}{\textwidth}
+\footnotesize
+\vspace{4pt}
+\textit{Notes:} \citet{adao2019shift} show that shift-share residuals are correlated across areas with similar exposure shares, which clustering on geography does not capture. AKM is their exposure-robust standard error and AKM0 the null-imposed version, whose interval is obtained by inverting a test and is therefore not symmetric about the estimate. Shocks are clustered on origin: the instrument averages national inflows over an eleven-year window, so adjacent cohorts drawn from one origin share ten of those years. The share matrix has 230 origins but only 175 metropolitan areas, so its rank is bounded by the latter; the redundant columns are retained here and dropped inside the variance calculation.
+\end{minipage}
+\end{table}
+
